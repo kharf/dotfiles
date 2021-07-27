@@ -1,7 +1,7 @@
 # <img src="https://github.com/jglovier/dotfiles-logo/blob/main/dotfiles-logo.png" alt="dotfiles logo" width="400">
 
-[![GitHub](https://img.shields.io/github/license/kharf/dotfiles?label=license&style=for-the-badge)](https://github.com/kharf/dotfiles/blob/master/LICENSE.txt)
-[![GitHub Linter Workflow](https://img.shields.io/github/workflow/status/kharf/dotfiles/linter/master?label=linter&style=for-the-badge)](https://github.com/kharf/dotfiles/actions/workflows/linter.yaml)
+[![GitHub](https://img.shields.io/github/license/kharf/dotfiles?label=license&style=for-the-badge)](https://github.com/kharf/dotfiles/blob/main/LICENSE.txt)
+[![GitHub Linter Workflow](https://img.shields.io/github/workflow/status/kharf/dotfiles/linter/main?label=linter&style=for-the-badge)](https://github.com/kharf/dotfiles/actions/workflows/linter.yaml)
 
 My dotfiles setup using [git](https://git-scm.com/) bare repository functionality.
 
@@ -32,7 +32,7 @@ My dotfiles setup using [git](https://git-scm.com/) bare repository functionalit
 
 1. Now you are ready to track your dot files.  
 
-**Note:** To see which files are currently being tracked, use `dot ls-tree -r master --name-only`
+**Note:** To see which files are currently being tracked, use `dot ls-tree -r main --name-only`
 
 ## Install the dotfiles on a new machine
 
