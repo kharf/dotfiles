@@ -1,6 +1,5 @@
 call plug#begin('~/.vim/plugged')
 Plug 'arcticicestudio/nord-vim'
-Plug 'rust-lang/rust.vim'
 Plug 'preservim/nerdtree'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'vim-airline/vim-airline'
@@ -8,6 +7,9 @@ Plug 'vim-airline/vim-airline-themes'
 call plug#end()
 
 colorscheme nord
+
+let mapleader=","
+set timeout timeoutlen=1500
 
 " Set internal encoding of vim, not needed on neovim, since coc.nvim using some
 " unicode characters in the file autoload/float.vim
@@ -175,8 +177,15 @@ nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list.
 nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
 
+let g:NERDTreeWinPos = "right"
 autocmd VimEnter * NERDTree
 nmap <M-1> :NERDTreeToggle<CR>
 
+" Use ESC to exit insert mode in :term
+:tnoremap <Esc> <C-\><C-n>
+
+set splitbelow
+
+let g:rustfmt_autosave = 1
 syntax enable
 filetype plugin indent on
