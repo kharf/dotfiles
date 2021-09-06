@@ -5,4 +5,3 @@ do
   xinput --set-prop $prop 'libinput Accel Profile Enabled' 0, 1
 done
 xset b off
-
