@@ -178,7 +178,7 @@ nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
 
 let g:NERDTreeWinPos = "right"
-autocmd VimEnter * NERDTree
+autocmd VimEnter * NERDTree | wincmd p
 nmap <M-1> :NERDTreeToggle<CR>
 
 " Use ESC to exit insert mode in :term
