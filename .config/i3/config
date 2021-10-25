@@ -146,6 +146,15 @@ assign [class="Thunderbird"] $ws4
 for_window [class=Thunderbird] focus
 assign [class="TelegramDesktop"] $ws5
 for_window [class=TelegramDesktop] focus
+assign [class="Slack"] $ws7
+for_window [class=Slack] focus
+assign [class="Microsoft Teams - Preview"] $ws4
+for_window [class="Microsoft Teams - Preview"] focus
+assign [class="jetbrains-idea"] $ws3
+for_window [class=jetbrains-idea] focus
+assign [class="NordPass"] $ws9
+for_window [class=NordPass] focus
+
 
 # Autostart apps:
 #exec --no-startup-id sleep 2 && xfce4-terminal
