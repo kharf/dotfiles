@@ -1,2 +1,3 @@
 set NERDTree
 set showmode
+set surround

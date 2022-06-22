@@ -4,7 +4,9 @@
 # Path to your oh-my-zsh installation.
 export ZSH="/home/kharf/.oh-my-zsh"
 export PATH=$PATH:/home/kharf/.linkerd2/bin
-
+export PATH="${PATH}:${HOME}/.krew/bin"
+export PATH="${PATH}:${HOME}/.kopa/bin"
+export PATH="$PATH:$HOME/.local/bin"
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
@@ -102,3 +104,11 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias dot='git --git-dir=/home/kharf/dotfiles/ --work-tree=$HOME'
 eval "$(starship init zsh)"
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+# flux autocompletion
+command -v flux >/dev/null && . <(flux completion zsh)
+export USE_GKE_GCLOUD_AUTH_PLUGIN=True
+export KIND_EXPERIMENTAL_PROVIDER=podman
