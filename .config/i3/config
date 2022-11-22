@@ -140,8 +140,8 @@ assign [class="Alacritty"] $ws1
 for_window [class=Alacritty] focus
 assign [class="(?i)firefox"] $ws2
 for_window [class=(?i)firefox] focus
-assign [class="(?i)google-chrome"] $ws2
-for_window [class=(?i)google-chrome] focus
+assign [class="(?i)brave-browser"] $ws2
+for_window [class=(?i)brave-browser] focus
 assign [class="Thunar"] $ws3
 for_window [class=Thunar] focus
 assign [class="Thunderbird"] $ws4
@@ -281,7 +281,7 @@ bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 
 # App shortcuts
-bindsym $mod+w exec "/usr/bin/google-chrome-stable"
+bindsym $mod+w exec "/usr/bin/brave"
 bindsym $mod+n exec "/usr/bin/thunar"
 bindsym Print exec "scrot ~/%Y-%m-%d-%T-screenshot.png"
 

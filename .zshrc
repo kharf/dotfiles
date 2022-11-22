@@ -113,3 +113,5 @@ command -v flux >/dev/null && . <(flux completion zsh)
 export USE_GKE_GCLOUD_AUTH_PLUGIN=True
 export KIND_EXPERIMENTAL_PROVIDER=podman
 export EDITOR=nvim
+export GOPRIVATE=github.com/mediamarktsaturn
+source /usr/share/nvm/init-nvm.sh
