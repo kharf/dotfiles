@@ -130,8 +130,11 @@ bindsym $mod+a focus parent
 set $ws1 ""
 set $ws2 ""
 set $ws3 ""
-set $ws4 ""
-set $ws5 ""
+set $ws4 ""
+set $ws5 ""
+set $ws6 "slack"
+set $ws7 "slack"
+set $ws9 "pw"
 
 bindsym $mod+s exec --no-startup-id ~/.config/i3/scripts/empty_workspace.sh
 
@@ -310,8 +313,8 @@ client.urgent           $urgent-bg-color   $urgent-bg-color   $text-color       
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available):
 bar {
-	   font pango:Noto Sans Regular 10, FontAwesome 10
-    status_command i3blocks -c ~/.config/i3/i3blocks.conf 
+    font pango:DejaVu Sans Mono, FontAwesome 12
+    status_command i3status-rs ~/.config/i3status-rust/config.toml
     position top
     colors {
         separator          #4b5262
