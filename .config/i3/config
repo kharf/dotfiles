@@ -132,7 +132,7 @@ set $ws2 ""
 set $ws3 ""
 set $ws4 ""
 set $ws5 ""
-set $ws6 "slack"
+set $ws6 "ins"
 set $ws7 "slack"
 set $ws9 "pw"
 
