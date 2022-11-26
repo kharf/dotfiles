@@ -207,6 +207,17 @@ local config = {
       ["<leader>bt"] = { "<cmd>BufferLineSortByTabs<cr>", desc = "Sort by tabs" },
       -- quick save
       -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
+      ["<leader>ds"] = { "<cmd> lua require'dap'.disconnect({ terminateDebuggee = true })<CR>", desc = "stop-dap-debugger" },
+      ["<leader>dC"] = { "<cmd> lua require('dapui').close()<CR>", desc = "close-dap-ui" },
+      ["<leader>dT"] = { "<cmd> lua require('dapui').toggle()<CR>", desc = "toggle-dap-ui" },
+      ["<leader>dO"] = { "<cmd> lua require('dapui').open()<CR>", desc = "open-dap-ui" },
+      ["<leader>dc"] = { "<cmd> lua require'dap'.continue()<CR>", desc = "dap-continue" },
+      ["<leader>dt"] = { "<cmd> lua require('dap-go').debug_test()<CR>", desc = "dap-debug-test" },
+      ["<leader>do"] = { "<cmd> lua require'dap'.step_over()<CR>", desc = "dap-step-over" },
+      ["<leader>di"] = { "<cmd> lua require'dap'.step_into()<CR>", desc = "dap-step-into" },
+      ["<leader>du"] = { "<cmd> lua require'dap'.step_out()<CR>", desc = "dap-step-out" },
+      ["<leader>db"] = { "<cmd>lua require'dap'.toggle_breakpoint()<CR>", desc = "set-breakpoint" },
+      ["<leader>dB"] = { "<cmd>lua require'dap'.clear_breakpoints()<CR>", desc = "clear-breakpoints" },
     },
     t = {
       -- setting a mapping to false will disable it
@@ -217,9 +228,20 @@ local config = {
   -- Configure plugins
   plugins = {
     init = {
+      { "arcticicestudio/nord-vim" },
+      { "mfussenegger/nvim-dap" },
       {
-      "arcticicestudio/nord-vim",
-     },
+        "leoluz/nvim-dap-go",
+        config = function() require("dap-go").setup() end,
+      },
+      {
+        "rcarriga/nvim-dap-ui",
+        config = function() require("dapui").setup() end,
+      },
+      {
+        "theHamsta/nvim-dap-virtual-text",
+        config = function() require("nvim-dap-virtual-text").setup() end,
+      },
     },
     -- All other entries override the require("<key>").setup({...}) call for default plugins
     ["null-ls"] = function(config) -- overrides `require("null-ls").setup(config)`
@@ -291,6 +313,7 @@ local config = {
           -- third key is the key to bring up next level and its displayed
           -- group name in which-key top level menu
           ["b"] = { name = "Buffer" },
+          ["d"] = { name = "Debug" },
         },
       },
     },
