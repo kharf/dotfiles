@@ -115,3 +115,9 @@ export KIND_EXPERIMENTAL_PROVIDER=podman
 export EDITOR=nvim
 export GOPRIVATE=github.com/mediamarktsaturn
 source /usr/share/nvm/init-nvm.sh
+
+# Key mapping for qwertz
+xmodmap -e "keycode 34 = braceleft braceright"
+xmodmap -e "keycode 47 = parenleft parenright"
+xmodmap -e "keycode 48 = bracketleft bracketright"
+
