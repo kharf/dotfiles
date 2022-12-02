@@ -230,6 +230,7 @@ local config = {
     init = {
       { "arcticicestudio/nord-vim" },
       { "mfussenegger/nvim-dap" },
+      { "nvim-treesitter/nvim-treesitter-context" },
       {
         "leoluz/nvim-dap-go",
         config = function() require("dap-go").setup() end,
