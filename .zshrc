@@ -105,9 +105,6 @@ source $ZSH/oh-my-zsh.sh
 alias dot='git --git-dir=/home/kharf/dotfiles/ --work-tree=$HOME'
 eval "$(starship init zsh)"
 
-#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-export SDKMAN_DIR="$HOME/.sdkman"
-[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 # flux autocompletion
 command -v flux >/dev/null && . <(flux completion zsh)
 export USE_GKE_GCLOUD_AUTH_PLUGIN=True
@@ -120,4 +117,8 @@ source /usr/share/nvm/init-nvm.sh
 xmodmap -e "keycode 34 = braceleft braceright"
 xmodmap -e "keycode 47 = parenleft parenright"
 xmodmap -e "keycode 48 = bracketleft bracketright"
+#
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 
