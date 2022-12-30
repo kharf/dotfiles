@@ -71,9 +71,12 @@ require('packer').startup(function(use)
   -- Handling persistent terminals in nvim
   use {"akinsho/toggleterm.nvim", tag = '*', config = function()
     require("toggleterm").setup{
-      open_mapping = [[<F7>]],
+      open_mapping = [[<F11>]],
     }
   end}
+
+  use 'nvim-tree/nvim-web-devicons'
+  use {'romgrk/barbar.nvim', wants = 'nvim-web-devicons'}
 
   -- disable netrw at the very start of your init.lua (strongly advised)
   vim.g.loaded_netrw = 1
@@ -163,6 +166,11 @@ vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
 vim.keymap.set('n', 'k', "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
 vim.keymap.set('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
 
+-- barbar
+vim.keymap.set('n', '<leader>h', ':BufferPrevious<CR>', { expr = true, silent = true })
+vim.keymap.set('n', '<leader>l', ':BufferNext<CR>', { expr = true, silent = true })
+vim.keymap.set('n', '<leader>q', ':BufferClose<CR>', { expr = true, silent = true })
+
 -- [[ Highlight on yank ]]
 -- See `:help vim.highlight.on_yank()`
 local highlight_group = vim.api.nvim_create_augroup('YankHighlight', { clear = true })
@@ -179,7 +187,6 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 require('lualine').setup {
   options = {
     icons_enabled = false,
-    theme = 'oxocarbon',
     component_separators = '|',
     section_separators = '',
   },
@@ -211,6 +218,7 @@ require('gitsigns').setup {
 -- Enable nvim-tree as our file browser
 require("nvim-tree").setup()
 vim.keymap.set('n', '<leader>o', ':NvimTreeToggle<CR>')
+vim.keymap.set('n', '<leader>p', ':NvimTreeFocus<CR>')
 
 -- [[ Configure Telescope ]]
 -- See `:help telescope` and `:help telescope.setup()`
