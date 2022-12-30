@@ -69,14 +69,14 @@ require('packer').startup(function(use)
   }
 
   -- Handling persistent terminals in nvim
-  use {"akinsho/toggleterm.nvim", tag = '*', config = function()
-    require("toggleterm").setup{
+  use { "akinsho/toggleterm.nvim", tag = '*', config = function()
+    require("toggleterm").setup {
       open_mapping = [[<F11>]],
     }
-  end}
+  end }
 
   use 'nvim-tree/nvim-web-devicons'
-  use {'romgrk/barbar.nvim', wants = 'nvim-web-devicons'}
+  use { 'romgrk/barbar.nvim', wants = 'nvim-web-devicons' }
 
   -- disable netrw at the very start of your init.lua (strongly advised)
   vim.g.loaded_netrw = 1
@@ -167,9 +167,8 @@ vim.keymap.set('n', 'k', "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = tr
 vim.keymap.set('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
 
 -- barbar
-vim.keymap.set('n', '<leader>h', ':BufferPrevious<CR>', { expr = true, silent = true })
-vim.keymap.set('n', '<leader>l', ':BufferNext<CR>', { expr = true, silent = true })
-vim.keymap.set('n', '<leader>q', ':BufferClose<CR>', { expr = true, silent = true })
+vim.keymap.set('n', '<leader>h', ':BufferPrevious<CR>', { silent = true })
+vim.keymap.set('n', '<leader>l', ':BufferNext<CR>', { silent = true })
 
 -- [[ Highlight on yank ]]
 -- See `:help vim.highlight.on_yank()`
@@ -219,6 +218,9 @@ require('gitsigns').setup {
 require("nvim-tree").setup()
 vim.keymap.set('n', '<leader>o', ':NvimTreeToggle<CR>')
 vim.keymap.set('n', '<leader>p', ':NvimTreeFocus<CR>')
+
+-- Toggleterm
+vim.keymap.set('t', '<ESC>', '<C-\\><C-n>')
 
 -- [[ Configure Telescope ]]
 -- See `:help telescope` and `:help telescope.setup()`
@@ -360,6 +362,9 @@ local on_attach = function(_, bufnr)
   nmap('<leader>wl', function()
     print(vim.inspect(vim.lsp.buf.list_workspace_folders()))
   end, '[W]orkspace [L]ist Folders')
+
+
+  nmap('<leader>f', ':Format<CR>', '[F]ormat')
 
   -- Create a command `:Format` local to the LSP buffer
   vim.api.nvim_buf_create_user_command(bufnr, 'Format', function(_)
