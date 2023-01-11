@@ -1,0 +1,50 @@
+theme = "oxocarbon.toml"
+icons = "awesome"
+
+[[block]]
+block = "disk_space"
+path = "/"
+alias = "/"
+info_type = "available"
+unit = "GB"
+interval = 20
+warning = 20.0
+alert = 10.0
+
+[[block]]
+block = "memory"
+display_type = "memory"
+format_mem = "{mem_used_percents}"
+format_swap = "{swap_used_percents}"
+[block.theme_overrides]
+idle_bg = "#08bdba"
+idle_fg = "#161616"
+
+[[block]]
+block = "cpu"
+interval = 1
+[block.theme_overrides]
+idle_bg = "#78a9ff"
+idle_fg = "#161616"
+
+
+[[block]]
+block = "load"
+interval = 1
+format = "{1m}"
+[block.theme_overrides]
+idle_bg = "#33b1ff"
+idle_fg = "#161616"
+
+
+[[block]]
+block = "sound"
+[block.theme_overrides]
+idle_bg = "#82cfff"
+idle_fg = "#161616"
+
+[[block]]
+block = "time"
+interval = 5
+format = "%a %d/%m %R"
+

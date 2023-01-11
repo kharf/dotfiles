@@ -318,12 +318,12 @@ bar {
     position top
     colors {
         separator          #4b5262
-        background         #2f343f
-        statusline         #2f343f
-        focused_workspace  #2f343f #88c0d0 #2f343f
-        active_workspace   #2f343f #2f343f #d8dee8
-        inactive_workspace #2f343f #2f343f #d8dee8
-        urgent_workspacei  #2f343f #ebcb8b #2f343f
+        background         #161616
+        statusline         #161616
+        focused_workspace  #161616 #ee5396 #161616
+        active_workspace   #161616 #ee5396 #161616
+        inactive_workspace #161616 #161616 #dde1e6
+        urgent_workspacei  #161616 #ebcb8b #2f343f
     }
 }
 
