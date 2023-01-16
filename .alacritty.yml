@@ -1,20 +1,11 @@
-# Copyright (c) 2017-present Arctic Ice Studio <development@arcticicestudio.com>
-# Copyright (c) 2017-present Sven Greb <code@svengreb.de>
-
-# Project:    Nord Alacritty
-# Version:    0.1.0
-# Repository: https://github.com/arcticicestudio/nord-alacritty
-# License:    MIT
-# References:
-#   https://github.com/alacritty/alacritty
 env:
   WINIT_X11_SCALE_FACTOR: "1.0"
 
 font:
   normal:
     family: Source Code Pro
-    style: Regular
-    bold:
+    style: Semibold
+  bold:
     family: Source Code Pro
     style: Bold
   italic:
@@ -27,26 +18,35 @@ font:
 
 colors:
   primary:
-    background: '#161616'
-    foreground: '#ffffff'
-  cursor:
-    cursor: '#dde1e6'
-  normal:
-    black: '#161616'
-    red: '#33b1ff'
-    green: '#ff7eb6'
-    yellow: '#42be65'
-    blue: '#08bdba'
-    magenta: '#82cfff'
-    cyan: '#78a9ff'
-    white: '#e5e9f0'
-  bright:
-    black: '#525252'
-    red: '#33b1ff'
-    green: '#ff7eb6'
-    yellow: '#42be65'
-    blue: '#08bdba'
-    magenta: '#82cfff'
-    cyan: '#78a9ff'
-    white: '#ffffff'
+    background: "#161616"
+    foreground: "#f2f4f8"
 
+  # selection:
+    # background: "#525252"
+    # text: "#f2f4f8"
+    # text: "#000000"
+
+  normal:
+    black: "#262626"
+    # color8 #393939
+
+    red: "#ff7eb6"
+    # color9 #ff7eb6
+
+    green: "#42be65"
+    # color10 #42be65
+
+    # color3 "#82cfff"
+    # color11 #82cfff
+
+    blue: "#33b1ff"
+    # color12 #33b1ff
+
+    magenta: "#ee5396"
+    # color13 #ee5396
+
+    cyan: "#3ddbd9"
+    # color14 #3ddbd9
+
+    white: "#dde1e6"
+    # color15 #ffffff

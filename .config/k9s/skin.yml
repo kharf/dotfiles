@@ -1,16 +1,17 @@
 # Styles...
-foreground: &foreground "#f8f8f2"
+foreground: &foreground "#dde1e6"
 background: &background "#161616"
 current_line: &current_line "#44475a"
-selection: &selection "#44475a"
-comment: &comment "#6272a4"
-cyan: &cyan "#8be9fd"
-green: &green "#50fa7b"
-orange: &orange "#ffb86c"
-pink: &pink "#ff79c6"
-purple: &purple "#bd93f9"
-red: &red "#ff5555"
-yellow: &yellow "#f1fa8c"
+selection: &selection "#525252"
+comment: &comment "#dde1e6"
+
+cyan: &cyan "#08bdba"
+green: &green "#42be65"
+blue: &blue "#33b1ff"
+pink: &pink "#ee5396"
+purple: &purple "#be95ff"
+red: &red "#ff7eb6"
+yellow: &yellow "#78a9ff"
 
 # Skin...
 k9s:
@@ -36,7 +37,7 @@ k9s:
     buttonBgColor: *purple
     buttonFocusFgColor: *yellow
     buttonFocusBgColor: *pink
-    labelFgColor: *orange
+    labelFgColor: *blue
     fieldFgColor: *foreground
   frame:
     # Borders styles.
@@ -59,14 +60,14 @@ k9s:
       modifyColor: *purple
       addColor: *green
       errorColor: *red
-      highlightColor: *orange
+      highlightColor: *blue
       killColor: *comment
       completedColor: *comment
     # Border title styles.
     title:
       fgColor: *foreground
       bgColor: *current_line
-      highlightColor: *orange
+      highlightColor: *blue
       counterColor: *purple
       filterColor: *pink
   views:

@@ -141,10 +141,12 @@ bindsym $mod+s exec --no-startup-id ~/.config/i3/scripts/empty_workspace.sh
 # autostart start applications + bind program to workspace:
 assign [class="Alacritty"] $ws1
 for_window [class=Alacritty] focus
+assign [class="kitty"] $ws1
+for_window [class=kitty] focus
 assign [class="(?i)firefox"] $ws2
 for_window [class=(?i)firefox] focus
-assign [class="(?i)brave-browser"] $ws2
-for_window [class=(?i)brave-browser] focus
+assign [class="(?i)brave-browser" instance="brave-browser"] $ws2
+for_window [class=(?i)brave-browser instance="brave-browser"] focus
 assign [class="Thunar"] $ws3
 for_window [class=Thunar] focus
 assign [class="Thunderbird"] $ws4
@@ -153,8 +155,11 @@ assign [class="TelegramDesktop"] $ws5
 for_window [class=TelegramDesktop] focus
 assign [class="Slack"] $ws7
 for_window [class=Slack] focus
-assign [class="Microsoft Teams - Preview"] $ws4
-for_window [class="Microsoft Teams - Preview"] focus
+
+# teams
+assign [instance="crx_cifhbcnohmdccbgoicgdjpfamggdegmo"] $ws4
+for_window [instance="crx_cifhbcnohmdccbgoicgdjpfamggdegmo"] focus
+
 assign [class="jetbrains-idea"] $ws3
 for_window [class=jetbrains-idea] focus
 assign [class="1Password"] $ws9
