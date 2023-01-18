@@ -1,5 +1,5 @@
-export ZSH="/home/kharf/.oh-my-zsh"
-export PATH=$PATH:/home/kharf/.linkerd2/bin
+export ZSH="$HOME/.oh-my-zsh"
+export PATH=$PATH:$HOME/.linkerd2/bin
 export PATH="${PATH}:${HOME}/.krew/bin"
 export PATH="$PATH:$HOME/.local/bin"
 export XDG_CONFIG_HOME="$HOME/.config"
@@ -11,6 +11,7 @@ export GOPRIVATE=github.com/mediamarktsaturn
 
 alias dot='git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
 alias hx=helix
+alias helix=hx
 alias sudo='sudo '
 
 autoload -Uz compinit
