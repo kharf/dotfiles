@@ -61,7 +61,9 @@ for_window [class="^.*"] border pixel 0
 floating_modifier $mod
 
 # start a terminal:
-bindsym $mod+Return exec alacritty
+bindsym $mod+Return exec alacritty --class term
+
+bindsym $mod+Shift+Return [class="scratchterm"] scratchpad show; move position center
 
 # kill focused window:
 bindsym $mod+c kill
@@ -139,8 +141,9 @@ set $ws9 "pw"
 bindsym $mod+s exec --no-startup-id ~/.config/i3/scripts/empty_workspace.sh
 
 # autostart start applications + bind program to workspace:
-assign [class="Alacritty"] $ws1
-for_window [class=Alacritty] focus
+assign [class="term"] $ws1
+for_window [class=term] focus
+for_window [class="scratchterm"] floating enable, resize set 1500 1000, move scratchpad
 assign [class="kitty"] $ws1
 for_window [class=kitty] focus
 assign [class="(?i)firefox"] $ws2
@@ -168,13 +171,6 @@ assign [class="Insomnia"] $ws6
 for_window [class=Insomnia] focus
 assign [class="ops"] $ws9
 for_window [class=ops] focus
-
-
-# Autostart apps:
-#exec --no-startup-id sleep 2 && xfce4-terminal
-#exec --no-startup-id google-chrome-stable
-#exec --no-startup-id sleep 3 && thunar
-#exec --no-startup-id blueberry-tray
 
 # dex execute .desktop files:
 exec --no-startup-id dex -a -s /etc/xdg/autostart/:~/.config/autostart
@@ -350,3 +346,5 @@ bindsym F10 exec rofi -show window -line-padding 4 \
                 -show-icons -drun-icon-theme "Arc-X-D" -font "Droid Sans Regular 10"                
                 
 
+# start scratchpad alacritty on start
+exec alacritty --class scratchterm,scratchterm

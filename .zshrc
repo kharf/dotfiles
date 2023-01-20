@@ -13,6 +13,7 @@ alias dot='git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
 alias hx=helix
 alias helix=hx
 alias sudo='sudo '
+alias k=kubectl
 
 autoload -Uz compinit
 compinit
