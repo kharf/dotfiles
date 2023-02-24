@@ -22,6 +22,7 @@ idle_fg = "#161616"
 
 [[block]]
 block = "memory"
+format = " $icon $mem_avail.eng(prefix:M)/$mem_total.eng(prefix:M) "
 [block.theme_overrides]
 idle_bg = "#08bdba"
 idle_fg = "#161616"
