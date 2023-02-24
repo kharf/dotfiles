@@ -135,7 +135,7 @@ set $ws3 ""
 set $ws4 ""
 set $ws5 ""
 set $ws6 "ins"
-set $ws7 "slack"
+set $ws7 "any"
 set $ws9 "pw"
 
 bindsym $mod+s exec --no-startup-id ~/.config/i3/scripts/empty_workspace.sh
@@ -158,6 +158,8 @@ assign [class="TelegramDesktop"] $ws5
 for_window [class=TelegramDesktop] focus
 assign [class="Slack"] $ws7
 for_window [class=Slack] focus
+assign [class="Steam"] $ws7
+for_window [class=Steam] focus
 
 # teams
 assign [instance="crx_cifhbcnohmdccbgoicgdjpfamggdegmo"] $ws4
@@ -314,7 +316,7 @@ client.urgent           $urgent-bg-color   $urgent-bg-color   $text-color       
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available):
 bar {
-    font pango:DejaVu Sans Mono, FontAwesome 12
+    font pango:DejaVu Sans Mono, Font Awesome 6 Free
     status_command i3status-rs ~/.config/i3status-rust/config.toml
     position top
     colors {

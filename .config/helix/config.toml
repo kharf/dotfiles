@@ -18,3 +18,8 @@ separator = "│"
 mode.normal = "NORMAL"
 mode.insert = "INSERT"
 mode.select = "SELECT"
+
+[editor.whitespace.render]
+space = "all"
+tab = "none"
+newline = "none"
