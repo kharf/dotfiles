@@ -59,19 +59,19 @@
 "ui.bufferline.active" = { fg = "base06", bg = "base01" }
 
 [palette]
-base00 = "#161616" # Default Background
-base01 = "#262626" # Lighter Background (Used for status bars, line number and folding marks)
-base02 = "#393939" # Selection Background
-base03 = "#525252" # Comments, Invisibles, Line Highlighting
-base04 = "#dde1e6" 
-base05 = "#f2f4f8" # Default Foreground, Caret, Delimiters, Operators
-base06 = "#ffffff" # Light Foreground (Not often used)
-base07 = "#08bdba" # Light Background (Not often used)
-base08 = "#3ddbd9" 
-base09 = "#be95ff" # Integers, Boolean, Constants, XML Attributes, Markup Link Url
-base0A = "#ee5396" # Classes, Markup Bold, Search Text Background
-base0B = "#33b1ff" # Strings, Inherited Class, Markup Code, Diff Inserted
-base0C = "#ff7eb6" # Support, Regular Expressions, Escape Characters, Markup Quotes
-base0D = "#42be65" # Functions, Methods, Attribute IDs, Headings
-base0E = "#78a9ff" # Integers, Boolean, Constants, XML Attributes, Markup Link Url
-base0F = "#82cfff" # Deprecated, Opening/Closing Embedded Language Tags, e.g. <?php ?>
+base00 = "#161616"
+base01 = "#262626"
+base02 = "#393939"
+base03 = "#525252"
+base04 = "#dde1e6"
+base05 = "#f2f4f8"
+base06 = "#ffffff"
+base07 = "#08bdba"
+base08 = "#3ddbd9"
+base09 = "#be95ff"
+base0A = "#ee5396"
+base0B = "#33b1ff"
+base0C = "#ff7eb6"
+base0D = "#42be65"
+base0E = "#78a9ff"
+base0F = "#82cfff"

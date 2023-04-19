@@ -6,7 +6,8 @@ export XDG_CONFIG_HOME="$HOME/.config"
 
 export USE_GKE_GCLOUD_AUTH_PLUGIN=True
 export KIND_EXPERIMENTAL_PROVIDER=podman
-export EDITOR=hx
+export EDITOR=helix
+export KUBE_EDITOR=helix
 export GOPRIVATE=github.com/mediamarktsaturn
 
 alias dot='git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
@@ -34,4 +35,3 @@ eval "$(starship init zsh)"
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
-
