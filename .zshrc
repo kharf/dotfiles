@@ -2,10 +2,10 @@ export ZSH="$HOME/.oh-my-zsh"
 export PATH=$PATH:$HOME/.linkerd2/bin
 export PATH="${PATH}:${HOME}/.krew/bin"
 export PATH="$PATH:$HOME/.local/bin"
+export PATH="$PATH:$HOME/go/bin"
 export XDG_CONFIG_HOME="$HOME/.config"
 
 export USE_GKE_GCLOUD_AUTH_PLUGIN=True
-export KIND_EXPERIMENTAL_PROVIDER=podman
 export EDITOR=helix
 export KUBE_EDITOR=helix
 export GOPRIVATE=github.com/mediamarktsaturn
