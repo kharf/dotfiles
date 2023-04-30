@@ -79,10 +79,10 @@ bindsym $mod+F1 exec "xed ~/.config/i3/keybindings"
 #bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 
 # change focus:
-bindsym $mod+j focus left
-bindsym $mod+k focus down
-bindsym $mod+u focus up
-bindsym $mod+ntilde focus right
+bindsym $mod+h focus left
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+bindsym $mod+l focus right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
@@ -91,10 +91,10 @@ bindsym $mod+Up focus up
 bindsym $mod+Right focus right
 
 # move focused window:
-bindsym $mod+Shift+j move left
-bindsym $mod+Shift+k move down
-bindsym $mod+Shift+l move up
-bindsym $mod+Shift+ntilde move right
+bindsym $mod+Shift+h move left
+bindsym $mod+Shift+j move down
+bindsym $mod+Shift+k move up
+bindsym $mod+Shift+l move right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Shift+Left move left
@@ -103,7 +103,7 @@ bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
 # split in horizontal orientation:
-bindsym $mod+h split h
+# bindsym $mod+h split h
 
 # split in vertical orientation:
 bindsym $mod+v split v
@@ -130,13 +130,14 @@ bindsym $mod+a focus parent
 
 # workspace-edit:
 set $ws1 ""
-set $ws2 ""
-set $ws3 ""
-set $ws4 ""
-set $ws5 ""
-set $ws6 "ins"
-set $ws7 "any"
-set $ws9 "pw"
+set $ws2 "2"
+set $ws3 "3"
+set $ws4 "4"
+set $ws5 "5"
+set $ws6 "6"
+set $ws7 "7"
+set $ws8 "8"
+set $ws9 "9"
 
 bindsym $mod+s exec --no-startup-id ~/.config/i3/scripts/empty_workspace.sh
 
@@ -298,7 +299,7 @@ bindsym $mod+m exec "/usr/local/bin/switch-audio-port"
 
 
 # Lock the system
-bindsym $mod+l exec i3lock -i ~/.config/i3/i3-lock-screen-scaled.png -t -f
+bindsym $mod+shift+p exec i3lock -i ~/.config/i3/i3-lock-screen-scaled.png -t -f
 
 set $bg-color            #8fbcbb
 set $inactive-bg-color   #2f343f
