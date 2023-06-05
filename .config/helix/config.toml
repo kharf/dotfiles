@@ -4,6 +4,7 @@ theme = "oxocarbon"
 line-number = "relative"
 mouse = false
 bufferline = "multiple"
+completion-replace = true
 
 [editor.cursor-shape]
 insert = "bar"
@@ -12,7 +13,7 @@ select = "underline"
 
 [editor.statusline]
 left = ["mode", "spinner"]
-center = ["file-name"]
+center = ["file-name",  "version-control"]
 right = ["diagnostics", "selections", "position", "file-encoding", "file-line-ending", "file-type"]
 separator = "│"
 mode.normal = "NORMAL"
